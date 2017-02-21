@@ -22,7 +22,6 @@ public class BackgroundColor {
     int [] status = new int[42];
     int id[] = {R.id.day_1,R.id.day_2,R.id.day_3,R.id.day_4,R.id.day_5,R.id.day_6,R.id.day_7,R.id.day_8,R.id.day_9,R.id.day_10,R.id.day_11,R.id.day_12,R.id.day_13,R.id.day_14,R.id.day_15,R.id.day_16,R.id.day_17,R.id.day_18,R.id.day_19,R.id.day_20,R.id.day_21,R.id.day_22,R.id.day_23,R.id.day_24,R.id.day_25,R.id.day_26,R.id.day_27,R.id.day_28,R.id.day_29,R.id.day_30,R.id.day_31,R.id.day_32,R.id.day_33,R.id.day_34,R.id.day_35,R.id.day_36,R.id.day_37,R.id.day_38,R.id.day_39,R.id.day_40,R.id.day_41,R.id.day_42};
     CalendearDate calendeardate = new CalendearDate();
-    MainActivity ma = new MainActivity();
     Calendar calendar = Calendar.getInstance();
     final int Nowyear = calendar.get(Calendar.YEAR);
     final int Nowmonth= calendar.get(Calendar.MONTH);
@@ -141,7 +140,7 @@ public class BackgroundColor {
     public void color_basic(MainActivity mainactivity){
         StatusDecide();
         for(int i = 0;i<42;i++){
-            ma.color_day(status[i],id[i],mainactivity);
+            MainActivity.color_day(status[i],id[i],mainactivity);
         }
     }
 
@@ -149,7 +148,7 @@ public class BackgroundColor {
         for(int i = 0;i<Datatable.list_day.size();i++){
             if(Datatable.list_day.get(i).year == getCuryear()){
                 if(Datatable.list_day.get(i).month == getCurmonth()){
-                    ma.color_day(Datatable.list_day.get(i).status,id[Datatable.list_day.get(i).day + get_firstday(getCuryear(),getCurmonth()) - 2],mainactivity);
+                    MainActivity.color_day(Datatable.list_day.get(i).status,id[Datatable.list_day.get(i).day + get_firstday(getCuryear(),getCurmonth()) - 2],mainactivity);
                 }
             }
         }
@@ -165,5 +164,5 @@ public class BackgroundColor {
         Optional_button_movement obm = new Optional_button_movement();
         return obm.Curmonth;
     }
-    
+
 }

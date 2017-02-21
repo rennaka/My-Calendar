@@ -13,7 +13,6 @@ import android.widget.EditText;
 public class PopupSchedule {
 
     CalendearDate calendeardate = new CalendearDate();
-    MainActivity ma = new MainActivity();
     BackgroundColor bc = new BackgroundColor();
     Datatable dt = new Datatable();
     static int day;
@@ -311,7 +310,7 @@ public class PopupSchedule {
                         public void onClick(DialogInterface dialog, int which) {
                             Datatable datatable = new Datatable();
                             datatable.setdata(getCuryear(),getCurmonth(),PopupSchedule.day,result,edittext.getText().toString());
-                            ma.color_day(result,getid()[PopupSchedule.day + bc.get_firstday(getCuryear(),getCurmonth()) - 2],mainactivity);
+                            MainActivity.color_day(result,getid()[PopupSchedule.day + bc.get_firstday(getCuryear(),getCurmonth()) - 2],mainactivity);
                         }
                     });
                     ad2.setNegativeButton("戻る", new DialogInterface.OnClickListener() {

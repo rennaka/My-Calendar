@@ -17,7 +17,7 @@ public class Optional_button_movement {
     int Curmonth = calendar.get(Calendar.MONTH);
     static MainActivity mainactivity;
 
-
+/*
         public void previous_month(){
             if (Curmonth == 0) {
                 Curyear--;
@@ -35,6 +35,8 @@ public class Optional_button_movement {
                 Curmonth++;
             }
         }
+
+        */
 
         public void color_setting(MainActivity mainactivity){
 
