@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        color_month(this);
+        bc.color_month(this);
         optional_button_click(this);
         ps.day_button_click(this);
         dataAppearance.FixedAppearance(this);
@@ -89,10 +89,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void color_month(MainActivity mainactivity){
-        bc.color_basic(mainactivity);
-        bc.color_appointment(mainactivity);
-    }
+
 
 
 

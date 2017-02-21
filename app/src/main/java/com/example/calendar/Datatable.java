@@ -20,6 +20,7 @@ public class Datatable {
         ds.memo = memo;
         list_day.add(ds);
     }
+
     public int get_index(int year,int month,int day){
         for(int i = 0;i<list_day.size();i++){
             if(list_day.get(i).year == year){
@@ -32,7 +33,6 @@ public class Datatable {
         }
         return -1;
     }
-
 
     class DataStructure{
         int year;

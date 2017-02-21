@@ -28,6 +28,11 @@ public class BackgroundColor {
     final int Nowmonth= calendar.get(Calendar.MONTH);
     final int Nowday = calendar.get(Calendar.DATE);
 
+    public void color_month(MainActivity mainactivity){
+        color_basic(mainactivity);
+        color_appointment(mainactivity);
+    }
+
     /*
         0:過去
         1:未来
